@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<div class="ticker">
+<div class="ticker" aria-hidden="true">
   <div class="ticker-track">
     <span>⚡ NO REHEARSALS &nbsp;✠ NO PLANS &nbsp;💀 NO SURVIVORS &nbsp;🤘 FERMENTED COSMIC TRACTOR APOCALYPSE &nbsp;⚡ EST. DURING A THUNDERSTORM &nbsp;✠ 0 REHEARSALS &nbsp;💀 1 PLANE CRASH &nbsp;🤘 INFINITE CHAOS &nbsp;</span>
     <span>⚡ NO REHEARSALS &nbsp;✠ NO PLANS &nbsp;💀 NO SURVIVORS &nbsp;🤘 FERMENTED COSMIC TRACTOR APOCALYPSE &nbsp;⚡ EST. DURING A THUNDERSTORM &nbsp;✠ 0 REHEARSALS &nbsp;💀 1 PLANE CRASH &nbsp;🤘 INFINITE CHAOS &nbsp;</span>
@@ -17,15 +17,15 @@
 </div>
 
 <section class="hero" id="home">
-  <div class="hero-bg" id="heroBg"></div>
-  <div class="hero-scan"></div>
-  <div class="hero-rune">✠</div>
+  <div class="hero-bg" id="heroBg" aria-hidden="true"></div>
+  <div class="hero-scan" aria-hidden="true"></div>
+  <div class="hero-rune" aria-hidden="true">✠</div>
   <div class="hero-content">
-    <div class="hero-skulls">💀 &nbsp; 💀 &nbsp; 💀 &nbsp; 💀 &nbsp; 💀</div>
+    <div class="hero-skulls" aria-hidden="true">💀 &nbsp; 💀 &nbsp; 💀 &nbsp; 💀 &nbsp; 💀</div>
     <h1 class="hero-band-name glitch" data-text="FERMENTED">FERMENTED</h1>
     <h1 class="hero-band-name amber glitch" data-text="COSMIC TRACTOR">COSMIC TRACTOR</h1>
     <h1 class="hero-band-name glitch" data-text="APOCALYPSE">APOCALYPSE</h1>
-    <div class="hero-divider">🤘 ━━━━━━━━━━━━━━━━━━━━━━━━━━━ 🤘</div>
+    <div class="hero-divider" aria-hidden="true">🤘 ━━━━━━━━━━━━━━━━━━━━━━━━━━━ 🤘</div>
     <p class="hero-motto">
       "We do not rehearse. We do not plan.<br/>
       We arrive. Things catch fire. You are welcome."
@@ -38,16 +38,16 @@
       <div class="hstat"><div class="hstat-n">∞</div><div class="hstat-l">CHAOS</div></div>
     </div>
     <a href="#backstory" class="hero-cta">⚡ ENTER THE APOCALYPSE ⚡</a>
-    <div class="hero-scroll">▼ SCROLL IF YOU DARE ▼</div>
+    <div class="hero-scroll" aria-hidden="true">▼ SCROLL IF YOU DARE ▼</div>
   </div>
 </section>
 
 <section class="backstory-section" id="backstory">
   <div class="sec-wrap">
     <div class="sec-head">
-      <span class="sec-icon">☠</span>
+      <span aria-hidden="true" class="sec-icon">☠</span>
       <h2 class="sec-title">THE ORIGIN</h2>
-      <span class="sec-icon">☠</span>
+      <span aria-hidden="true" class="sec-icon">☠</span>
     </div>
     <div class="backstory-box">
       <div class="backstory-grid">
@@ -71,16 +71,16 @@
 <section id="members">
   <div class="sec-wrap">
     <div class="sec-head">
-      <span class="sec-icon">🔥</span>
+      <span aria-hidden="true" class="sec-icon">🔥</span>
       <h2 class="sec-title">THE FIVE SURVIVORS</h2>
-      <span class="sec-icon">🔥</span>
+      <span aria-hidden="true" class="sec-icon">🔥</span>
     </div>
     <p class="sec-sub">— TAP ANY MEMBER TO SUMMON THEIR SOUL —</p>
     <div class="members-grid" id="membersGrid"></div>
   </div>
 </section>
 
-<div class="modal" id="memberModal">
+<div class="modal" id="memberModal" role="dialog" aria-modal="true" aria-label="Band member details">
   <div class="modal-back" onclick="closeModal()"></div>
   <div class="modal-box">
     <button class="modal-close" onclick="closeModal()">✕ BANISH</button>
@@ -88,8 +88,8 @@
       <div class="modal-imgcol">
         <div class="modal-portrait-wrap">
           <img id="mImg" src="" alt="" class="modal-portrait"/>
-          <div class="mc tl"></div><div class="mc tr"></div>
-          <div class="mc bl"></div><div class="mc br"></div>
+          <div class="mc tl" aria-hidden="true"></div><div class="mc tr" aria-hidden="true"></div>
+          <div class="mc bl" aria-hidden="true"></div><div class="mc br" aria-hidden="true"></div>
         </div>
         <div id="mBar" class="modal-cbar"></div>
       </div>
@@ -97,9 +97,9 @@
         <p id="mRole" class="modal-role"></p>
         <h3 id="mStage" class="modal-stagename"></h3>
         <p id="mReal" class="modal-realname"></p>
-        <div class="modal-divider">⚡━━━━━━━━━━━━━━━━━━━━━━━━━━━⚡</div>
+        <div class="modal-divider" aria-hidden="true">⚡━━━━━━━━━━━━━━━━━━━━━━━━━━━⚡</div>
         <p id="mWeapon" class="modal-weapon"></p>
-        <div class="modal-divider2">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</div>
+        <div class="modal-divider2" aria-hidden="true">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</div>
         <p id="mBio" class="modal-bio"></p>
         <div class="modal-facts-label">▶ CONFIRMED INCIDENTS:</div>
         <div id="mFacts" class="modal-facts"></div>
@@ -111,9 +111,9 @@
 <section class="tours-past" id="tours">
   <div class="sec-wrap">
     <div class="sec-head">
-      <span class="sec-icon">🗺</span>
+      <span aria-hidden="true" class="sec-icon">🗺</span>
       <h2 class="sec-title">PLACES WE HAVE DESTROYED</h2>
-      <span class="sec-icon">🗺</span>
+      <span aria-hidden="true" class="sec-icon">🗺</span>
     </div>
     <p class="sec-sub">— CONFIRMED INCIDENTS 2021–2024 —</p>
     <div style="overflow-x:auto;">
@@ -138,14 +138,14 @@
 <section id="albums">
   <div class="sec-wrap">
     <div class="sec-head">
-      <span class="sec-icon">💿</span>
+      <span aria-hidden="true" class="sec-icon">💿</span>
       <h2 class="sec-title">THE DISCOGRAPHY</h2>
-      <span class="sec-icon">💿</span>
+      <span aria-hidden="true" class="sec-icon">💿</span>
     </div>
     <p class="sec-sub">— ALL RECORDED WITHOUT REHEARSAL —</p>
     <div class="albums-grid">
       <div class="album-card">
-        <div class="album-art" style="background:#1a0a00;"><span>✈</span><div class="album-num">01</div></div>
+        <div class="album-art" style="background:#1a0a00;"><span aria-hidden="true">✈</span><div class="album-num" aria-hidden="true">01</div></div>
         <div class="album-year">2021 · ACCIDENTAL RECORDS</div>
         <div class="album-title">CRASH LANDING IN E MINOR</div>
         <div class="album-label">Debut album · Recorded in one take (involuntarily)</div>
@@ -159,7 +159,7 @@
         </ol>
       </div>
       <div class="album-card">
-        <div class="album-art" style="background:#001a00;"><span>🌱</span><div class="album-num">02</div></div>
+        <div class="album-art" style="background:#001a00;"><span aria-hidden="true">🌱</span><div class="album-num" aria-hidden="true">02</div></div>
         <div class="album-year">2022 · MULCH RECORDS LTD.</div>
         <div class="album-title">THE SOIL SESSIONS</div>
         <div class="album-label">2nd album · Guitars recorded in a garden</div>
@@ -174,7 +174,7 @@
         </ol>
       </div>
       <div class="album-card">
-        <div class="album-art" style="background:#1a001a;"><span>⚔</span><div class="album-num">03</div></div>
+        <div class="album-art" style="background:#1a001a;"><span aria-hidden="true">⚔</span><div class="album-num" aria-hidden="true">03</div></div>
         <div class="album-year">2024 · ACCIDENTAL RECORDS</div>
         <div class="album-title">SABER-TOOTHED APOCALYPSE</div>
         <div class="album-label">3rd album · Mixed with a cavalry sword</div>
@@ -196,9 +196,9 @@
 <section class="chaos-section" id="chaos">
   <div class="sec-wrap">
     <div class="sec-head">
-      <span class="sec-icon">📊</span>
+      <span aria-hidden="true" class="sec-icon">📊</span>
       <h2 class="sec-title">THE CHAOS TRACKER</h2>
-      <span class="sec-icon">📊</span>
+      <span aria-hidden="true" class="sec-icon">📊</span>
     </div>
     <p class="sec-sub">— LIVE STATISTICS · UPDATED AFTER EVERY SHOW · PROBABLY —</p>
     <div class="chaos-grid" id="chaosGrid"></div>
@@ -208,9 +208,9 @@
 <section class="upcoming-section" id="upcoming">
   <div class="sec-wrap">
     <div class="sec-head">
-      <span class="sec-icon">📅</span>
+      <span aria-hidden="true" class="sec-icon">📅</span>
       <h2 class="sec-title">UPCOMING DESTRUCTION</h2>
-      <span class="sec-icon">📅</span>
+      <span aria-hidden="true" class="sec-icon">📅</span>
     </div>
     <p class="sec-sub">— 2025 WORLD TOUR — THE TRACTOR ROLLS AGAIN —</p>
     <div class="upcoming-grid" id="showsGrid"></div>
@@ -219,7 +219,7 @@
 
 <section class="tickets-section" id="tickets">
   <div class="tickets-inner">
-    <div class="hero-skulls" style="color:rgba(255,255,255,0.3);margin-bottom:1rem;">💀 💀 💀 💀 💀</div>
+    <div class="hero-skulls" aria-hidden="true" style="color:rgba(255,255,255,0.3);margin-bottom:1rem;">💀 💀 💀 💀 💀</div>
     <h2 class="tickets-title">GET YOUR TICKETS</h2>
     <p class="tickets-sub">Tickets are non-refundable. We are not responsible for property damage, unexpected knightings, or rice-related incidents that may occur during the show.</p>
     <a href="#upcoming" class="tickets-cta">🤘 SEE ALL SHOWS &amp; BUY NOW 🤘</a>
@@ -227,12 +227,12 @@
   </div>
 </section>
 
-<div class="modal" id="ticketModal">
+<div class="modal" id="ticketModal" role="dialog" aria-modal="true" aria-label="Ticket purchase">
   <div class="modal-back" onclick="closeTicket()"></div>
   <div class="modal-box" style="max-width:420px;">
     <button class="modal-close" onclick="closeTicket()">✕ CLOSE</button>
     <div style="padding:2.5rem;">
-      <div style="font-size:3rem;text-align:center;margin-bottom:1rem;">🎫</div>
+      <div style="font-size:3rem;text-align:center;margin-bottom:1rem;" aria-hidden="true">🎫</div>
       <h3 id="tktCity" style="font-family:var(--bebas);font-size:2rem;color:var(--amber);text-align:center;margin-bottom:.5rem;"></h3>
       <p style="font-family:var(--mono);font-size:11px;color:var(--zinc);text-align:center;letter-spacing:.15em;margin-bottom:2rem;">SELECT YOUR TICKET TYPE</p>
       <div class="tkt-option" onclick="confirmTicket('General Admission')">
@@ -252,11 +252,11 @@
   </div>
 </div>
 
-<div class="modal" id="confirmModal">
+<div class="modal" id="confirmModal" role="dialog" aria-modal="true" aria-label="Order confirmation">
   <div class="modal-back" onclick="closeConfirm()"></div>
   <div class="modal-box" style="max-width:380px;">
     <div style="padding:2.5rem;">
-      <div class="confirm-icon">🤘</div>
+      <div class="confirm-icon" aria-hidden="true">🤘</div>
       <h3 class="confirm-title">YOU ARE CONFIRMED</h3>
       <p id="confirmMsg" class="confirm-msg"></p>
       <button class="confirm-close" onclick="closeConfirm()">CLOSE</button>
@@ -265,7 +265,7 @@
 </div>
 
 <footer class="site-footer">
-  <div class="footer-rune">☠ ✠ ☠ ✠ ☠ ✠ ☠ ✠ ☠</div>
+  <div class="footer-rune" aria-hidden="true">☠ ✠ ☠ ✠ ☠ ✠ ☠ ✠ ☠</div>
   <h2 class="footer-logo">F.C.T.A.</h2>
   <p class="footer-full">FERMENTED COSMIC TRACTOR APOCALYPSE</p>
   <div class="footer-statement">
@@ -277,7 +277,7 @@
     <strong>That is enough.</strong>"
     <span class="footer-attr">— FCTA, Est. during a thunderstorm</span>
   </div>
-  <div class="footer-rune" style="color:var(--amber);opacity:.3;">⚡ ⚡ ⚡ ⚡ ⚡ ⚡ ⚡ ⚡ ⚡</div>
+  <div class="footer-rune" aria-hidden="true" style="color:var(--amber);opacity:.3;">⚡ ⚡ ⚡ ⚡ ⚡ ⚡ ⚡ ⚡ ⚡</div>
   <p class="footer-fine">© FCTA. All rights reversed. No rehearsals. No regrets.</p>
 </footer>
 

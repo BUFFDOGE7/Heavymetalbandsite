@@ -51,28 +51,66 @@ const MEMBERS = [
   }
 ];
 
+const TOURS = [
+  { year:'2021', name:'THE ACCIDENTAL DEBUT TOUR',        cities:'Helsinki, Tallinn, Riga, Vilnius',              highlights:'Dmitri played 2 sets with frozen salmon. Carlos watered the audience.',            status:'chaos',  label:'CHAOTIC'   },
+  { year:'2022', name:'THE VODKA & VENGEANCE TOUR',       cities:'Berlin, Warsaw, Prague, Vienna, Budapest',      highlights:'Ahmed accidentally conducted the Berlin Philharmonic mid-show.',                 status:'fire',   label:'LEGENDARY' },
+  { year:'2022', name:'THE RICE HARVEST FESTIVAL RUN',    cities:'Tokyo, Osaka, Seoul, Taipei',                   highlights:'Hiroshi rated every venue\'s rice. All received 2/10.',                         status:'legend', label:'HISTORIC'  },
+  { year:'2023', name:'THE MULCH OR DIE EUROPEAN TOUR',   cities:'London, Amsterdam, Brussels, Paris, Madrid',    highlights:'Carlos planted a garden backstage at Wembley. It died in 3 days.',              status:'fire',   label:'LEGENDARY' },
+  { year:'2023', name:'THE SCREAM LOUDER THAN GOD TOUR',  cities:'New York, Chicago, Los Angeles, Seattle',       highlights:'Ashley\'s soundcheck collapsed a merch table and two load-bearing opinions.',    status:'chaos',  label:'CHAOTIC'   },
+  { year:'2024', name:'THE SABRE-RATTLING WORLD TOUR',    cities:'Sydney, Melbourne, Auckland, Cape Town, Dubai', highlights:'Ahmed knighted 3 audience members. None consented.',                            status:'legend', label:'HISTORIC'  },
+  { year:'2024', name:'GLASTONBURY (UNINVITED)',           cities:'Pilton, UK',                                    highlights:'Showed up unannounced. Played 47 minutes before anyone noticed. Reviews: mixed. Attendance: confused.', status:'chaos', label:'CHAOTIC' }
+];
+
+const ALBUMS = [
+  {
+    icon:'✈', bg:'#1a0a00', num:'01',
+    year:'2021 · ACCIDENTAL RECORDS',
+    title:'CRASH LANDING IN E MINOR',
+    label:'Debut album · Recorded in one take (involuntarily)',
+    tracks:['Aviation Fuel & Bad Ideas','Five Angry Men, Zero Plans','The Amp That Refused To Die','Storm In D (Catastrophic)','Rice Grade: Unacceptable','Hats Everywhere']
+  },
+  {
+    icon:'🌱', bg:'#001a00', num:'02',
+    year:'2022 · MULCH RECORDS LTD.',
+    title:'THE SOIL SESSIONS',
+    label:'2nd album · Guitars recorded in a garden',
+    tracks:['Compost Breakdown','Watering The Mosh Pit','Cucumber Paradiddle','Real Tone (Real Earth)','The Planting of Dmitri','All My Plants Are Dead','Neon Rage In The Garden']
+  },
+  {
+    icon:'⚔', bg:'#1a001a', num:'03',
+    year:'2024 · ACCIDENTAL RECORDS',
+    title:'SABER-TOOTHED APOCALYPSE',
+    label:'3rd album · Mixed with a cavalry sword',
+    tracks:['Desert Sabre Overture','Uninvited (At Glastonbury)','Vodka Is A Drumstick','Ashley Vs. The Sound Engineer','Time Is A Suggestion','The Knighting (feat. 3 Confused Fans)','No Regrets (Only Fires)','Fermented (Reprise)']
+  }
+];
+
 const CHAOS = [
-  { id:'cFires',      num:47,   color:'#f87171', bar:'#b91c1c', label:'THINGS THAT CAUGHT FIRE',          note:'Amps, setlists, one pair of culottes (Ahmed\'s, 2023)' },
-  { id:'cCucumbers',  num:312,  color:'#f59e0b', bar:'#f59e0b', label:'CUCUMBERS USED AS DRUMSTICKS',     note:'Dmitri insists this improves "freshness of the sound"' },
-  { id:'cPlants',     num:89,   color:'#4ade80', bar:'#22c55e', label:'PLANTS KILLED BY CARLOS',          note:'He is very confident it was not his fault' },
-  { id:'cKnightings', num:9,    color:'#c4b5fd', bar:'#a78bfa', label:'UNOFFICIAL KNIGHTINGS',            note:'Ahmed. Cavalry saber. None were consensual.' },
-  { id:'cSpeakers',   num:203,  color:'#fca5a5', bar:'#f87171', label:'SPEAKERS DESTROYED BY ASHLEY',    note:'She considers this a success metric' },
-  { id:'cVodka',      num:1847, color:'#7dd3fc', bar:'#38bdf8', label:'LITRES OF VODKA CONSUMED ON STAGE',note:'Dmitri disputes this number (he says it is higher)' }
+  { id:'cFires',      num:47,   color:'#f87171', bar:'#b91c1c', label:'THINGS THAT CAUGHT FIRE',           note:'Amps, setlists, one pair of culottes (Ahmed\'s, 2023)' },
+  { id:'cCucumbers',  num:312,  color:'#f59e0b', bar:'#f59e0b', label:'CUCUMBERS USED AS DRUMSTICKS',      note:'Dmitri insists this improves "freshness of the sound"' },
+  { id:'cPlants',     num:89,   color:'#4ade80', bar:'#22c55e', label:'PLANTS KILLED BY CARLOS',           note:'He is very confident it was not his fault' },
+  { id:'cKnightings', num:9,    color:'#c4b5fd', bar:'#a78bfa', label:'UNOFFICIAL KNIGHTINGS',             note:'Ahmed. Cavalry saber. None were consensual.' },
+  { id:'cSpeakers',   num:203,  color:'#fca5a5', bar:'#f87171', label:'SPEAKERS DESTROYED BY ASHLEY',     note:'She considers this a success metric' },
+  { id:'cVodka',      num:1847, color:'#7dd3fc', bar:'#38bdf8', label:'LITRES OF VODKA CONSUMED ON STAGE', note:'Dmitri disputes this number (he says it is higher)' }
 ];
 
 const SHOWS = [
-  { date:'MAR 14', venue:'TAVASTIA CLUB',      city:'HELSINKI, FINLAND · 2025',       support:'The Screaming Potatoes',                            soldOut:false },
-  { date:'MAR 21', venue:'ROCK CAFÉ',           city:'TALLINN, ESTONIA · 2025',        support:'Vodka & The Consequences',                          soldOut:false },
-  { date:'APR 3',  venue:'ORION',               city:'BERLIN, GERMANY · 2025',         support:'El Mulchador Fan Club (Carlos\'s cousins)',           soldOut:false },
-  { date:'APR 18', venue:'PARADISO',            city:'AMSTERDAM, NETHERLANDS · 2025',  support:'The Cucumber Incidents',                            soldOut:false },
-  { date:'MAY 2',  venue:'BRIXTON ACADEMY',     city:'LONDON, UK · 2025',              support:'None. They are afraid.',                            soldOut:true  },
-  { date:'MAY 17', venue:"L'OLYMPIA",           city:'PARIS, FRANCE · 2025',           support:'Desert Sabre & The Unnecessary Swords',             soldOut:false },
-  { date:'JUN 5',  venue:'SALA APOLO',          city:'MADRID, SPAIN · 2025',           support:"Rice Reaper's Inspection Team",                    soldOut:false },
-  { date:'JUL 20', venue:'BUDOKAN',             city:'TOKYO, JAPAN · 2025',            support:'The Rice Quality Inspectors',                       soldOut:false },
-  { date:'AUG 9',  venue:'SYDNEY OPERA HOUSE',  city:'SYDNEY, AUSTRALIA · 2025',       support:'TBA (still deciding if they are brave enough)',      soldOut:false }
+  { date:'MAR 14', venue:'TAVASTIA CLUB',     city:'HELSINKI, FINLAND · 2025',      support:'The Screaming Potatoes',                           soldOut:false },
+  { date:'MAR 21', venue:'ROCK CAFÉ',          city:'TALLINN, ESTONIA · 2025',       support:'Vodka & The Consequences',                         soldOut:false },
+  { date:'APR 3',  venue:'ORION',              city:'BERLIN, GERMANY · 2025',        support:"El Mulchador Fan Club (Carlos's cousins)",          soldOut:false },
+  { date:'APR 18', venue:'PARADISO',           city:'AMSTERDAM, NETHERLANDS · 2025', support:'The Cucumber Incidents',                           soldOut:false },
+  { date:'MAY 2',  venue:'BRIXTON ACADEMY',    city:'LONDON, UK · 2025',             support:'None. They are afraid.',                           soldOut:true  },
+  { date:'MAY 17', venue:"L'OLYMPIA",          city:'PARIS, FRANCE · 2025',          support:'Desert Sabre & The Unnecessary Swords',            soldOut:false },
+  { date:'JUN 5',  venue:'SALA APOLO',         city:'MADRID, SPAIN · 2025',          support:"Rice Reaper's Inspection Team",                    soldOut:false },
+  { date:'JUL 20', venue:'BUDOKAN',            city:'TOKYO, JAPAN · 2025',           support:'The Rice Quality Inspectors',                      soldOut:false },
+  { date:'AUG 9',  venue:'SYDNEY OPERA HOUSE', city:'SYDNEY, AUSTRALIA · 2025',      support:'TBA (still deciding if they are brave enough)',     soldOut:false }
 ];
 
-document.getElementById('heroBg').style.backgroundImage = `url(${IMG_BAND})`;
+const TICKET_MESSAGES = {
+  'General Admission': city => `Your General Admission ticket for ${city} is confirmed. Bring ear protection, closed-toe shoes, and the will to survive Ashley's opening scream.`,
+  'VIP Front Row':     city => `VIP Front Row confirmed for ${city}. You will receive a complimentary cucumber. Stand slightly to the left of Ahmed.`,
+  'Apocalypse Package':city => `APOCALYPSE PACKAGE confirmed for ${city}! Your meet & greet includes a rice quality inspection with Hiroshi, a garden tour with Carlos (bring a shovel), and a commemorative knighting from Ahmed. Duration: ~47 minutes or until something catches fire.`
+};
 
 function renderMembers() {
   const grid = document.getElementById('membersGrid');
@@ -89,6 +127,40 @@ function renderMembers() {
         <div class="mcard-tap">[ click to summon ]</div>
       </div>`;
     card.addEventListener('click', () => openModal(i));
+    grid.appendChild(card);
+  });
+}
+
+function renderTours() {
+  const tbody = document.getElementById('toursBody');
+  TOURS.forEach(t => {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td>${t.year}</td>
+      <td>${t.name}</td>
+      <td>${t.cities}</td>
+      <td>${t.highlights}</td>
+      <td><span class="badge ${t.status}">${t.label}</span></td>`;
+    tbody.appendChild(tr);
+  });
+}
+
+function renderAlbums() {
+  const grid = document.getElementById('albumsGrid');
+  ALBUMS.forEach(a => {
+    const card = document.createElement('div');
+    card.className = 'album-card';
+    card.innerHTML = `
+      <div class="album-art" style="background:${a.bg};">
+        <span aria-hidden="true">${a.icon}</span>
+        <div class="album-num" aria-hidden="true">${a.num}</div>
+      </div>
+      <div class="album-year">${a.year}</div>
+      <div class="album-title">${a.title}</div>
+      <div class="album-label">${a.label}</div>
+      <ol class="album-tracks">
+        ${a.tracks.map((t, i) => `<li><span class="track-n">${i + 1}</span>${t}</li>`).join('')}
+      </ol>`;
     grid.appendChild(card);
   });
 }
@@ -127,48 +199,49 @@ function renderShows() {
 
 function openModal(i) {
   const m = MEMBERS[i];
-  document.getElementById('mImg').src        = m.img;
-  document.getElementById('mRole').textContent      = m.role;
-  document.getElementById('mRole').style.color      = m.color;
-  document.getElementById('mStage').textContent     = m.stage;
-  document.getElementById('mStage').style.textShadow= `2px 2px 0 ${m.color}70`;
-  document.getElementById('mReal').textContent      = m.real;
-  document.getElementById('mWeapon').textContent    = m.weapon;
-  document.getElementById('mBio').textContent       = m.bio;
-  document.getElementById('mBar').style.background  = m.color;
-  document.getElementById('mFacts').innerHTML       = m.facts
+  document.getElementById('mImg').src                = m.img;
+  document.getElementById('mRole').textContent       = m.role;
+  document.getElementById('mRole').style.color       = m.color;
+  document.getElementById('mStage').textContent      = m.stage;
+  document.getElementById('mStage').style.textShadow = `2px 2px 0 ${m.color}70`;
+  document.getElementById('mReal').textContent       = m.real;
+  document.getElementById('mWeapon').textContent     = m.weapon;
+  document.getElementById('mBio').textContent        = m.bio;
+  document.getElementById('mBar').style.background   = m.color;
+  document.getElementById('mFacts').innerHTML        = m.facts
     .map(f => `<span class="fpill" style="color:${m.color};border-color:${m.color}44;">${f}</span>`)
     .join('');
   document.getElementById('memberModal').classList.add('open');
   document.body.style.overflow = 'hidden';
 }
+
 function closeModal() {
   document.getElementById('memberModal').classList.remove('open');
   document.body.style.overflow = '';
 }
 
 let currentCity = '';
+
 function buyTicket(city) {
   currentCity = city;
   document.getElementById('tktCity').textContent = city.toUpperCase();
   document.getElementById('ticketModal').classList.add('open');
   document.body.style.overflow = 'hidden';
 }
+
 function closeTicket() {
   document.getElementById('ticketModal').classList.remove('open');
   document.body.style.overflow = '';
 }
+
 function confirmTicket(type) {
   closeTicket();
-  const msgs = {
-    'General Admission': `Your General Admission ticket for ${currentCity} is confirmed. Bring ear protection, closed-toe shoes, and the will to survive Ashley's opening scream.`,
-    'VIP Front Row':     `VIP Front Row confirmed for ${currentCity}. You will receive a complimentary cucumber. Stand slightly to the left of Ahmed.`,
-    'Apocalypse Package':`APOCALYPSE PACKAGE confirmed for ${currentCity}! Your meet & greet includes a rice quality inspection with Hiroshi, a garden tour with Carlos (bring a shovel), and a commemorative knighting from Ahmed. Duration: ~47 minutes or until something catches fire.`
-  };
-  document.getElementById('confirmMsg').textContent = msgs[type] || 'Ticket confirmed. Good luck.';
+  const msgFn = TICKET_MESSAGES[type];
+  document.getElementById('confirmMsg').textContent = msgFn ? msgFn(currentCity) : 'Ticket confirmed. Good luck.';
   document.getElementById('confirmModal').classList.add('open');
   document.body.style.overflow = 'hidden';
 }
+
 function closeConfirm() {
   document.getElementById('confirmModal').classList.remove('open');
   document.body.style.overflow = '';
@@ -187,25 +260,30 @@ function animateCounters() {
     }, 28);
   });
 }
-const chaosObs = new IntersectionObserver(entries => {
-  if (entries[0].isIntersecting) { animateCounters(); chaosObs.disconnect(); }
-}, { threshold: 0.15 });
-
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') { closeModal(); closeTicket(); closeConfirm(); }
-});
 
 function lightning() {
   document.body.style.background = '#111';
   setTimeout(() => { document.body.style.background = '#000'; }, 55);
   setTimeout(lightning, 5000 + Math.random() * 15000);
 }
-setTimeout(lightning, 2500);
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') { closeModal(); closeTicket(); closeConfirm(); }
+});
 
 document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('heroBg').style.backgroundImage = `url(${IMG_BAND})`;
+
   renderMembers();
+  renderTours();
+  renderAlbums();
   renderChaos();
   renderShows();
-  const chaosSection = document.getElementById('chaos');
-  if (chaosSection) chaosObs.observe(chaosSection);
+
+  const chaosObs = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting) { animateCounters(); chaosObs.disconnect(); }
+  }, { threshold: 0.15 });
+  chaosObs.observe(document.getElementById('chaos'));
+
+  setTimeout(lightning, 2500);
 });

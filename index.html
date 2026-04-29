@@ -121,15 +121,7 @@
         <thead>
           <tr><th>YEAR</th><th>TOUR NAME</th><th>CITIES</th><th>HIGHLIGHTS</th><th>STATUS</th></tr>
         </thead>
-        <tbody>
-          <tr><td>2021</td><td>THE ACCIDENTAL DEBUT TOUR</td><td>Helsinki, Tallinn, Riga, Vilnius</td><td>Dmitri played 2 sets with frozen salmon. Carlos watered the audience.</td><td><span class="badge chaos">CHAOTIC</span></td></tr>
-          <tr><td>2022</td><td>THE VODKA &amp; VENGEANCE TOUR</td><td>Berlin, Warsaw, Prague, Vienna, Budapest</td><td>Ahmed accidentally conducted the Berlin Philharmonic mid-show.</td><td><span class="badge fire">LEGENDARY</span></td></tr>
-          <tr><td>2022</td><td>THE RICE HARVEST FESTIVAL RUN</td><td>Tokyo, Osaka, Seoul, Taipei</td><td>Hiroshi rated every venue's rice. All received 2/10.</td><td><span class="badge legend">HISTORIC</span></td></tr>
-          <tr><td>2023</td><td>THE MULCH OR DIE EUROPEAN TOUR</td><td>London, Amsterdam, Brussels, Paris, Madrid</td><td>Carlos planted a garden backstage at Wembley. It died in 3 days.</td><td><span class="badge fire">LEGENDARY</span></td></tr>
-          <tr><td>2023</td><td>THE SCREAM LOUDER THAN GOD TOUR</td><td>New York, Chicago, Los Angeles, Seattle</td><td>Ashley's soundcheck collapsed a merch table and two load-bearing opinions.</td><td><span class="badge chaos">CHAOTIC</span></td></tr>
-          <tr><td>2024</td><td>THE SABRE-RATTLING WORLD TOUR</td><td>Sydney, Melbourne, Auckland, Cape Town, Dubai</td><td>Ahmed knighted 3 audience members. None consented.</td><td><span class="badge legend">HISTORIC</span></td></tr>
-          <tr><td>2024</td><td>GLASTONBURY (UNINVITED)</td><td>Pilton, UK</td><td>Showed up unannounced. Played 47 minutes before anyone noticed. Reviews: mixed. Attendance: confused.</td><td><span class="badge chaos">CHAOTIC</span></td></tr>
-        </tbody>
+        <tbody id="toursBody"></tbody>
       </table>
     </div>
   </div>
@@ -143,53 +135,7 @@
       <span aria-hidden="true" class="sec-icon">💿</span>
     </div>
     <p class="sec-sub">— ALL RECORDED WITHOUT REHEARSAL —</p>
-    <div class="albums-grid">
-      <div class="album-card">
-        <div class="album-art" style="background:#1a0a00;"><span aria-hidden="true">✈</span><div class="album-num" aria-hidden="true">01</div></div>
-        <div class="album-year">2021 · ACCIDENTAL RECORDS</div>
-        <div class="album-title">CRASH LANDING IN E MINOR</div>
-        <div class="album-label">Debut album · Recorded in one take (involuntarily)</div>
-        <ol class="album-tracks">
-          <li><span class="track-n">1</span>Aviation Fuel &amp; Bad Ideas</li>
-          <li><span class="track-n">2</span>Five Angry Men, Zero Plans</li>
-          <li><span class="track-n">3</span>The Amp That Refused To Die</li>
-          <li><span class="track-n">4</span>Storm In D (Catastrophic)</li>
-          <li><span class="track-n">5</span>Rice Grade: Unacceptable</li>
-          <li><span class="track-n">6</span>Hats Everywhere</li>
-        </ol>
-      </div>
-      <div class="album-card">
-        <div class="album-art" style="background:#001a00;"><span aria-hidden="true">🌱</span><div class="album-num" aria-hidden="true">02</div></div>
-        <div class="album-year">2022 · MULCH RECORDS LTD.</div>
-        <div class="album-title">THE SOIL SESSIONS</div>
-        <div class="album-label">2nd album · Guitars recorded in a garden</div>
-        <ol class="album-tracks">
-          <li><span class="track-n">1</span>Compost Breakdown</li>
-          <li><span class="track-n">2</span>Watering The Mosh Pit</li>
-          <li><span class="track-n">3</span>Cucumber Paradiddle</li>
-          <li><span class="track-n">4</span>Real Tone (Real Earth)</li>
-          <li><span class="track-n">5</span>The Planting of Dmitri</li>
-          <li><span class="track-n">6</span>All My Plants Are Dead</li>
-          <li><span class="track-n">7</span>Neon Rage In The Garden</li>
-        </ol>
-      </div>
-      <div class="album-card">
-        <div class="album-art" style="background:#1a001a;"><span aria-hidden="true">⚔</span><div class="album-num" aria-hidden="true">03</div></div>
-        <div class="album-year">2024 · ACCIDENTAL RECORDS</div>
-        <div class="album-title">SABER-TOOTHED APOCALYPSE</div>
-        <div class="album-label">3rd album · Mixed with a cavalry sword</div>
-        <ol class="album-tracks">
-          <li><span class="track-n">1</span>Desert Sabre Overture</li>
-          <li><span class="track-n">2</span>Uninvited (At Glastonbury)</li>
-          <li><span class="track-n">3</span>Vodka Is A Drumstick</li>
-          <li><span class="track-n">4</span>Ashley Vs. The Sound Engineer</li>
-          <li><span class="track-n">5</span>Time Is A Suggestion</li>
-          <li><span class="track-n">6</span>The Knighting (feat. 3 Confused Fans)</li>
-          <li><span class="track-n">7</span>No Regrets (Only Fires)</li>
-          <li><span class="track-n">8</span>Fermented (Reprise)</li>
-        </ol>
-      </div>
-    </div>
+    <div class="albums-grid" id="albumsGrid"></div>
   </div>
 </section>
 
